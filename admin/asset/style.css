@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{
+  font-family: Poppins, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1rem;
+}
+body{
+  min-height: 100vh;
+  min-height: 100dvh;
+  background-color: #e6e6ef;
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+#sidebar{
+  box-sizing: border-box;
+  height: 95vh;
+  width: 250px;
+  padding: 5px 1em;
+  background-color: #e6e6ef;
+  border-right: 1px solid red;
+  position: sticky;
+  top: 0;
+  align-self: start;
+  transition: 300ms ease-in-out;
+  overflow: hidden;
+  text-wrap: nowrap;
+}
+#sidebar.close{
+  padding: 5px;
+  width: 60px;
+}
+#sidebar ul{
+  list-style: none;
+}
+#sidebar > ul > li:first-child{
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 16px;
+  .logo{
+    font-weight: 600;
+  }
+}
+#sidebar ul li.active a{
+  color: red;
+
+  svg{
+    fill: red;
+  }
+}
+
+#sidebar a, #sidebar .dropdown-btn, #sidebar .logo{
+  border-radius: .5em;
+  margin-bottom: 5px;
+  padding: .85em;
+  text-decoration: none;
+  color: red;
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+#sidebar a, #sidebar .dropdown-btn, #sidebar{
+  transition: 300ms ease-in-out;
+  border-bottom: 1px solid red;
+  margin-bottom: .5em;
+}
+#sidebar .sub-menu a{
+  border: none;
+}
+.dropdown-btn{
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+}
+#sidebar svg{
+  flex-shrink: 0;
+  fill: red;
+}
+#sidebar a span, #sidebar .dropdown-btn span{
+  flex-grow: 1;
+}
+#sidebar a:hover, #sidebar .dropdown-btn:hover{
+  background-color: #11121a;
+}
+#sidebar .sub-menu{
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: 300ms ease-in-out;
+
+  > div{
+    overflow: hidden;
+  }
+}
+#sidebar .sub-menu.show{
+  grid-template-rows: 1fr;
+}
+.dropdown-btn svg{
+  transition: 200ms ease;
+}
+.rotate svg:last-child{
+  rotate: 180deg;
+}
+#sidebar .sub-menu a{
+  padding-left: 3em;
+}
+#toggle-btn{
+  margin-left: auto;
+  padding: 1em;
+  border: none;
+  border-radius: .5em;
+  background: none;
+  cursor: pointer;
+
+  svg{
+    transition: rotate 150ms ease;
+  }
+}
+#toggle-btn:hover{
+  background-color: #11121a;
+}
+.logout{
+  position: absolute;
+  bottom: 5%;
+  width: 85%;
+}
+main{
+  padding: min(30px, 7%);
+}
+main p{
+  color: #000;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+.container{
+  border: 1px solid #000;
+  border-radius: 1em;
+  margin-bottom: 20px;
+  padding: min(3em, 15%);
+
+  h2, p { margin-top: 1em }
+}
+
+/* Responsive Styles */
+

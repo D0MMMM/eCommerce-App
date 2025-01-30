@@ -1,0 +1,197 @@
+/* General Styles */
+.toyota-container {
+    border: none;
+    background-color: #fff;
+    box-shadow: 0px 3px 5px 3px rgba(0, 0, 0, 0.2);
+    padding-left: 1.3em;
+    padding-right: 2.5em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    margin-bottom: 2.5em;
+}
+
+.form-container {
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 3px 5px 3px rgba(0, 0, 0, 0.2);
+    margin-bottom: 2.5em;
+    background-color: #fff;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 1.5em;
+    gap: 1em;
+}
+
+form input,
+form textarea {
+    padding: .5em;
+}
+
+form input[type="submit"] {
+    padding: 1em;
+    border: none;
+    background-color: red;
+    color: #fff;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+form input[type="submit"]:hover {
+    background-color: #000;
+    color: #fff;
+    transition: 0.5s ease-in-out;
+}
+
+form input[type="submit"]:active {
+    transform: scale(0.98);
+    background-color: red;
+    transition: 0.1s;
+}
+.actions{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.edit-btn {
+    border: none;
+    padding: .5em;
+    background-color: green;
+    color: #fff;
+    cursor: pointer;
+}
+
+.edit-btn:hover {
+    background-color: darkgreen;
+    color: #fff;
+    transition: 0.5s ease-in-out;
+}
+
+.delete-btn {
+    border: none;
+    padding: .5em;
+    background-color: red;
+    color: #fff;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    background-color: darkred;
+    color: #fff;
+    transition: 0.5s ease-in-out;
+}
+
+.edit-btn:active,
+.delete-btn:active {
+    transform: scale(0.98);
+    background-color: red;
+    transition: 0.1s;
+}
+
+i {
+    cursor: pointer;
+    height: .5em;
+    width: 3em;
+    text-align: center;
+}
+
+.search-container {
+    position: relative;
+    margin-bottom: 1em;
+}
+
+.search-container input[type="text"] {
+    width: 20%;
+    padding: 0.7em 2.5em 0.7em 1em;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+}
+
+.search-container .search-icon {
+    position: absolute;
+    left: 16.5%;
+    top: 43%;
+    transform: translateY(-50%);
+    color: #888;
+}
+
+/* Table Styles */
+.display-car table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.display-car th,
+.display-car td {
+    padding: 0.5em;
+    text-align: left;
+    border: 1px solid #ddd; /* Add border to create grid lines */
+}
+
+.display-car th {
+    background-color: #f4f4f4;
+}
+
+.display-car td {
+    border-bottom: 1px solid #ddd;
+}
+
+.display-car td[data-label]::before {
+    content: attr(data-label);
+    font-weight: bold;
+    display: block;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .search-container input[type="text"] {
+        width: 25%;
+    }
+
+    .form-container {
+        padding: 1em;
+    }
+
+    form {
+        grid-template-columns: 1fr;
+    }
+
+    .display-car table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    .display-car th,
+    .display-car td {
+        padding: 0.5em;
+        text-align: left;
+    }
+
+    .display-car th {
+        background-color: #f4f4f4;
+    }
+
+    .display-car td {
+        border-bottom: 1px solid #ddd;
+    }
+
+    .display-car td[data-label]::before {
+        content: attr(data-label);
+        font-weight: bold;
+        display: block;
+    }
+
+    /* Hide specific columns in responsive mode */
+    .display-car th:nth-child(4),
+    .display-car th:nth-child(6),
+    .display-car th:nth-child(7),
+    .display-car th:nth-child(8),
+    .display-car td:nth-child(4),
+    .display-car td:nth-child(6),
+    .display-car td:nth-child(7),
+    .display-car td:nth-child(8) {
+        display: none;
+    }
+}

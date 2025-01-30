@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+}
+body {
+    background-color: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: transparent;
+    padding: 3rem;
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+    margin-top: -100px;
+}
+
+h1 {
+    margin-bottom: 1rem;
+    color: #333;
+    text-transform: uppercase;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="text"],
+input[type="submit"] {
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    width: 100%;
+}
+
+input[type="submit"] {
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+}
+
+input[type="submit"]:hover {
+    background-color: #cc0000;
+}
+
+label {
+    margin-bottom: 0.5rem;
+    color: #333;
+    text-align: left;
+    font-weight: 700;
+}
+a{
+    color: #ff0000;
+    text-decoration: none;
+    font-size: 1.5em;
+    position: absolute;
+    top: .5em;
+    left: 1em;
+}
+svg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: -100;
+}
+.swal2-title {
+    font-family: 'Poppins', sans-serif; /* Change font family */
+    font-size: 24px; /* Change font size */
+    color: #ff6347; /* Change color */
+}
+
+.swal2-content {
+    font-family: 'Poppins',sans-serif;
+    font-size: 18px;
+    color: #333;
+}
+
+.swal2-popup {
+    font-family: 'Poppins', sans-serif; /* Apply to the entire modal content */
+}
+@media(max-width: 768px) {
+    .back-button {
+        font-size: 2em;
+    }
+}

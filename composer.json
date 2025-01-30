@@ -1,0 +1,13 @@
+{
+    "name": "win11/final-project",
+    "autoload": {
+        "psr-4": {
+            "Win11\\FinalProject\\": "src/"
+        }
+    },
+    "require": {
+        "phpmailer/phpmailer": "^6.9",
+        "paypal/paypal-checkout-sdk": "^1.0",
+        "symfony/yaml": "^7.1"
+    }
+}

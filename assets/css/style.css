@@ -1,0 +1,383 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
+    color: #000;
+}
+html{
+    overflow-x: hidden
+}
+body{
+    background-color: none;
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    transition: 0.6s;
+    text-transform: uppercase;
+}
+header.sticky{
+    background-color: rgba(0,0,0,0.7);
+    padding: 15px 100px;
+}
+header.sticky a{
+    color: #fff;
+}
+.logo{
+    font-size: 2rem;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+}
+.navbar a{
+    text-decoration: none;
+    display: inline-block;
+    margin-left: 3rem;
+    font-size: 1rem;
+    font-weight: 700;
+    transition: all 0.4s ease-in-out;
+}
+.navbar a:hover, .navbar a.active{
+    color: rgb(249, 73, 73);
+
+    /* border-bottom: 1px solid rgb(249, 73, 73); */
+}
+section{
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.home{
+    color: #fff;
+}
+.home img{
+    margin-top: 7.5em;
+    filter: drop-shadow(10px 25px 20px #000);
+}
+.home h1{
+    font-size: 3rem;
+    color: red;
+}
+.home .container{
+    margin-left: 3rem;
+}
+.home #get-started-btn{
+    /* background-color: red; */
+    color: #fff;
+    height: 3em;
+    width: 10em;
+    border-radius: 2%;
+    border: none;
+    cursor: pointer;
+    margin-top: 1em;
+    text-transform: uppercase;
+    transition: .5s;
+    background: linear-gradient(to left, red 50%, transparent 50%) right;
+    background-size: 200%;
+    font-weight: 700;
+}
+.home #get-started-btn:hover{
+    background-position: left;
+    color: red;
+    border: 1px solid red;
+}
+.home #sign-up-btn{
+    color: red;
+    border: 1px solid red;
+    height: 3em;
+    width: 10em;
+    border-radius: 2%;
+    cursor: pointer;
+    margin-top: 1em;
+    margin-left: .5em;
+    text-transform: uppercase;
+    transition: .5s;
+    background: linear-gradient(to left, transparent 50.1%, red 50%) right;
+    background-size: 200%;
+    font-weight: 700;
+}
+.home #sign-up-btn:hover{
+    border: none;
+    background-position: left;
+    color: #fff;
+}
+.about{
+    display: flex;
+    flex-direction: column;
+    top: 100%;
+    height: 100%;
+    width: 100%;
+    padding: 5em;
+    text-align: center;
+    background-color: #000;
+    overflow: hidden;
+}
+.about h1{
+    font-size: 2rem;
+    color: #fff;
+}
+.about p{
+    color: #fff;
+}
+.about span{
+    color: #fff;
+}
+.car-brand{
+    margin-top: 5em;
+    overflow: hidden;
+}
+.car-brand img{
+    width: 20em;
+    height: 13em;
+    margin: 2em;
+    background-color: #fff;
+    border-radius: 3%;
+    opacity: 0.6;
+    transition: 0.6s ease;
+}
+.car-brand img:hover{
+    transform: scale(1.1);
+    opacity: 2;
+}
+.brand-name{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.brand-name h2{
+    color: #fff;
+}
+.contact{
+    text-align: center;
+    background-color: #ecf0f1;
+}
+footer{
+    background-color:#192733;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+    width: 100%;
+    height: 25vh;
+}
+footer span{
+    color: #ffffff;
+    margin-top: 2em;
+}
+.social-icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 36.7%;
+    margin-top: 5.5em;
+    gap: 3em;
+    border-right: 1px solid #fff;
+    padding-right: 2em;
+}
+.social-icons i{
+    color: #fff;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+}
+.social-icons i:hover{
+    color: red;
+}
+.credits{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 35.7%;
+    margin-top: 3.5em;
+    padding-right: 2em;
+}
+.credits span a{
+    color: red;
+}
+.contact{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+.contact-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15em;
+}
+.contact-container h1{
+    align-self: start;
+    font-size: 3em;
+    text-transform: uppercase;
+}
+.contact-container p{
+    font-size: 1em;
+    align-self: start;
+}
+.form-container {
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 30em;
+    margin-bottom: 5em;
+    margin-left: 10em;
+}
+.form-container span{
+    color: red;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+.form-group {
+    margin-bottom: 5px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+    color: #333;
+    place-self: start;
+}
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+}
+.form-group.full-width {
+    grid-column: span 2;
+}
+textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+.submit-button {
+    color: white;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    height: 2.5em;
+    width: 10em;
+    transition: .5s;
+    background: linear-gradient(to left, red 50%, transparent 25%) right;
+    background-size: 200%;
+    font-weight: 700;
+}
+.submit-button:hover {
+    background-position: left;
+    color: red;
+    border: 1px solid red;
+}
+/* Responsive Grid for First Name and Last Name */
+@media (min-width: 400px) {
+    form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .form-group.full-width {
+        grid-column: span 2;
+    }
+
+    .submit-button {
+        grid-column: span 2;
+    }
+}
+.swal2-title {
+    font-family: 'Poppins', sans-serif; /* Change font family */
+    font-size: 24px; /* Change font size */
+    color: #ff6347; /* Change color */
+}
+
+.swal2-content {
+    font-family: 'Poppins',sans-serif;
+    font-size: 18px;
+    color: #333;
+}
+
+.swal2-popup {
+    font-family: 'Poppins', sans-serif; /* Apply to the entire modal content */
+}
+
+@media (max-width: 768px) {
+    .header{
+        width: 100%;
+        padding: 1em;
+    }
+    .navbar a{
+        text-align: center;
+        display: block;
+        margin: 0.5em 0;
+    }
+    section{
+        padding: 5rem 2%;
+        display: block;
+    }
+    .home img{
+        width: 100%;
+        margin-top: 2em;
+    }
+    .home .container{
+        margin-left: 0;
+        text-align: center;
+    }
+    .home h1{
+        font-size: 2rem;
+    }
+    .home #get-started-btn, .home #sign-up-btn{
+        width: 100%;
+        margin: 0.5em 0;
+    }
+    .about{
+        padding: 2em;
+    }
+    .car-brand{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .car-brand img{
+        width: 80%;
+        height: auto;
+        margin: 1em 0;
+    }
+    .brand-name{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .brand-name h2{
+        margin: 0.5em 0;
+    }
+    .contact-container{
+        margin-bottom: 5em;
+    }
+    .form-container {
+        width: 90%;
+        margin: 0 auto;
+    }
+}

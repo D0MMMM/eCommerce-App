@@ -1,0 +1,488 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
+    text-decoration: none;
+}
+body{
+    background-color: none;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    gap: 1.5em;
+    padding: 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    transition: 0.6s;
+    text-transform: uppercase;
+    background-color: transparent;
+} 
+header a{
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+}
+header a svg{
+    height: 1.5em;
+    width: 1.5em;
+    fill: #fff;
+}
+header.sticky{
+    background: #ffffff;
+    padding: 10px 100px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+header.sticky a{
+    color: #000000;
+}
+header.sticky a svg{
+    fill: #000000;
+}
+header.sticky .dropbtn{
+    color: #000000;
+}
+#logout{
+    font-weight: normal;
+}
+.dropdown-content a {
+    color: black;
+    padding: 0px 5px;
+    text-decoration: none;
+    font-size: 1em;
+    display: block;
+    background: linear-gradient(to left, transparent 50%, black 25%) right;
+    background-size: 200%;
+    transition: .5s ease-out;
+}
+.dropdown-content a:hover {
+    /* background-color: #f1f1f1; */
+    background-position: left;
+    color: #fff;
+}
+header span{
+    font-weight: lighter;
+    text-transform: capitalize;
+}
+.slider{
+    height: 100vh;
+    margin-top: -15px;
+    position: relative;
+    color: #ffffff;
+}
+.slider .list .item{
+    position: absolute;
+    inset: 0 0 0 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: .5s;
+}
+.slider .list .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.slider .list .item::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-image: linear-gradient(to top, #000000 20%, transparent);
+}
+.slider .list .item .content{
+    position: absolute;
+    left: 10%;
+    top: 20%;
+    width: 500px;
+    max-width: 80%;
+    z-index: 1;
+}
+.slider .list .item .content p:nth-child(1){
+    text-transform: uppercase;
+    letter-spacing: 10px;
+}
+.slider .list .item .content h2{
+    font-size: 100px;
+    margin: 0;
+}
+.slider .list .item.active{
+    opacity: 1;
+    z-index: 10;
+}
+@keyframes showContent {
+    to{
+        transform: translateY(0);
+        filter: blur(0);
+        opacity: 1;
+    }
+}
+.slider .list .item.active p:nth-child(1),
+.slider .list .item.active h2,
+.slider .list .item.active p:nth-child(3){
+    transform: translateY(30px);
+    filter: blur(20px);
+    opacity: 0;
+    animation: showContent .5s .7s ease-in-out 1 forwards;
+}
+.slider .list .item.active h2{
+    animation-delay: 1s;
+}
+.slider .list .item.active p:nth-child(3){
+    animation-delay: 1.3s;
+}
+.arrows{
+    position: absolute;
+    top: 30%;
+    right: 50px;
+    z-index: 11;
+}
+.arrows button{
+    font-family: monospace;
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    transition: .5s;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    font-size: x-large;
+    color: #fff;
+    background-color: #eee5;
+}
+.arrows button:hover{
+    background-color: #000000;
+    color: #eee;
+}
+.thumbnail{
+    position: absolute;
+    bottom: 50px;
+    z-index: 11;
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    height: 250px;
+    padding: 0 50px;
+    box-sizing: border-box;
+    overflow: auto;
+    justify-content: start;
+}
+.thumbnail::-webkit-scrollbar{
+    width: 0;
+}
+.thumbnail .item{
+    width: 150px;
+    height: 220px;
+    filter: brightness(.5);
+    transition: .5s;
+    flex-shrink: 0;
+}
+.thumbnail .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.thumbnail .item.active{
+    filter: brightness(1);
+}
+.thumbnail .item .content{
+    position: absolute;
+    inset: auto 10px 10px 10px;
+}
+@media screen and(max-width: 678px){
+    .thumbnail{
+        justify-content: start;
+    }
+    .slider .list .item .content{
+        font-size: 60px;
+    }
+    .arrows{
+        top: 10px;
+    }
+}
+.brand-choices{
+    background-color: crimson;
+    text-align: center;
+    padding: 1em 0em 1em 0em;
+}
+.brand-choices a{
+    color: #eee;
+    margin-left: none;
+    width: 100%;
+    padding: 1em;
+    background: linear-gradient(to left, crimson 50%, black 25%) right;
+    background-size: 200%;
+    transition: .5s ease-out;
+    font-weight: 700;
+}
+.brand-choices a:hover{
+    /* color: red; */
+    background-position: left;
+}
+.search-container {
+    position: absolute;
+    top: 10px;
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+.search-container input {
+    width: 100%;
+    padding: 10px 40px 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 16px;
+}
+
+.search-container .fa-magnifying-glass {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #000000;
+}
+section{
+    position: relative;
+    width: 100%;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+section::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    z-index: 1000;
+}
+.toyota .toyota-section{
+    display: flex;
+    flex-wrap: wrap;
+    /* display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(3, 1fr)); */
+    gap: 1.5rem;
+    /* justify-content: center; */
+}
+.toyota-container{
+    border: 1px solid #ccc;
+    padding: 1em;
+    /* box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.3); */
+    /* box-shadow: -1px 9px 23px 2px rgba(0,0,0,0.61) inset;
+    -webkit-box-shadow: -1px 9px 23px 2px rgba(0,0,0,0.61) inset;
+    -moz-box-shadow: -1px 9px 23px 2px rgba(0,0,0,0.61) inset; */
+}
+
+.toyota-container button{
+    margin-top: 1em;
+    padding: .8em 1.5em .8em 1.5em;
+    border: none;
+    border-radius: 3px;
+    background-color: red;
+    color: #eee;
+    cursor: pointer;
+    transition: .5s;
+    background: linear-gradient(to left, red 50%, transparent 25%) right;
+    background-size: 200%;
+    font-weight: 700;
+}
+.toyota-container button:hover{
+    background-position: left;
+    color: #000000;
+}
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+}
+.modal::-webkit-scrollbar{
+    width: 0;
+}
+.modal-content {
+    background-color: #fff;
+    margin: 5% auto; /* Center the modal vertically */
+    padding:1em;
+    border-radius: none;
+    width: 45%; /* Adjust the modal width */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 15px 0px 40px;
+}
+.modal-header h2 {
+    margin: 0;
+    text-transform: uppercase;
+}
+/* .modal img{
+    object-fit: cover;
+    border-radius: 5px;
+} */
+.close {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+.modal-body {
+    margin-top: 15px;
+}
+.add-to-cart-btn button{
+    margin-top: 1em;
+    text-transform: uppercase;
+    margin-left: 2em;
+    padding: .8em 1.5em .8em 1.5em;
+    border: none;
+    border-radius: 3px;
+    background-color: red;
+    color: #eee;
+    cursor: pointer;
+    transition: .5s;
+    background: linear-gradient(to left, red 50%, transparent 25%) right;
+    background-size: 200%;
+    font-weight: 700;
+}
+.add-to-cart-btn button:hover{
+    background-position: left;
+    color: #000000;
+}
+.cart-count {
+    /* background-color: red; */
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+    position: absolute;
+    z-index: -1;
+    top: 3.2em;
+    left: 19.5em;
+    transform: translate(50%, -50%);
+}
+.cart-count.sticky{
+    color: black;
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+    .slider .list .item .content {
+        width: 90%;
+        left: 5%;
+    }
+    .slider .list .item .content h2 {
+        font-size: 50px;
+    }
+    .slider .list .item .content p:nth-child(1),
+    .slider .list .item .content p:nth-child(3) {
+        font-size: 14px;
+    }
+    .arrows {
+        top: 20%;
+        right: 20px;
+    }
+    .thumbnail {
+        height: 150px;
+        padding: 0 20px;
+    }
+    .thumbnail .item {
+        width: 100px;
+        height: 150px;
+    }
+    .brand-choices a {
+        font-size: 14px;
+        padding: 0.5em;
+    }
+    section {
+        padding: 50px 20px;
+    }
+    .toyota .toyota-section {
+        margin-top: 2em;
+        justify-content: center;
+    }
+    .toyota-container img {
+        width: 75px;
+        height: 75px;
+    }
+    .toyota-container{
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .modal-content {
+        width: 90%;
+        margin: none;
+    }
+    .search-container i {
+        right: -2.5%;
+    }
+    .modal-content{
+        margin-top: 20em;
+    }
+}
+@media (max-width: 480px) {
+    .search-container input {
+        width: 95%;
+    }
+
+    .search-container i {
+        right: -2.5%;
+    }
+
+    .toyota-container {
+        width: 90%;
+    }
+    .modal {
+        position: absolute;
+    }
+    .modal-content {
+        width: 100%;
+        padding: 0.5em;
+        margin: none;
+    }
+
+    .modal-header h2 {
+        font-size: 1em;
+    }
+
+    .close {
+        font-size: 1em;
+    }
+    #modalDetails img {
+        padding-left: -10em;
+    }
+
+    #modalDetails strong {
+        width: 70px;
+    }
+    .slider {
+        height: 750px;
+    }
+
+    .slider .navigation button {
+        padding: 0.5em;
+    }
+}

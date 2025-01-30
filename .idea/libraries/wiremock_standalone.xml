@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="wiremock-standalone">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/vendor/paypal/paypalhttp/tests/wiremock-standalone.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
